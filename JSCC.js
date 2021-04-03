@@ -134,13 +134,31 @@ constructor using the value = new Array
 const numbers = new Array(1,2,3,4,5);
 console.log(numbers) // prints (5) [1, 2, 3, 4, 5]
 
+*/
+
 const fruits = ["Apples", "Pears", "Oranges", "Bananas", "Grapes"]
 
 console.log(fruits) //prints const fruits = ["Apples", "Pears", "Oranges", "Bananas", "Grapes"]
 
-In JS you can have different data types in an array.
+//In JS you can have different data types in an array.
 
-numbers booleans string
+//numbers booleans string
+console.log(fruits[3]) //prints out the 4th element in the array Bananas
+// to add to the array we could
+fruits[5] = "Mangos"
+console.log(fruits)
+//to add value without knowing how many items in array.
+//use .push
+fruits.push("Guava")
+console.log(fruits)
+//to add a value to the beginning
+//use .unshift
+fruits.unshift("Kiwi")
+console.log(fruits)
 
-*/
+fruits.pop(); //removes the last one of the array.
+console.log(fruits)
 
+//if you want to see if something is an array use
+console.log(Array.isArray(fruits)) //gives us true.
+console.log(fruits.indexOf('Mangos'))
