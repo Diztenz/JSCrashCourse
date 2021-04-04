@@ -135,7 +135,7 @@ const numbers = new Array(1,2,3,4,5);
 console.log(numbers) // prints (5) [1, 2, 3, 4, 5]
 
 */
-
+/*
 const fruits = ["Apples", "Pears", "Oranges", "Bananas", "Grapes"]
 
 console.log(fruits) //prints const fruits = ["Apples", "Pears", "Oranges", "Bananas", "Grapes"]
@@ -161,4 +161,134 @@ console.log(fruits)
 
 //if you want to see if something is an array use
 console.log(Array.isArray(fruits)) //gives us true.
-console.log(fruits.indexOf('Mangos'))
+console.log(fruits.indexOf('Mangos'))//gives you number in array
+*/
+//Object literals
+//key value pairs
+/*
+const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 30,
+    hobbies: ['music', 'movies', 'sports'],
+    address: {
+        street: '50 main st',
+        city: 'Boston',
+        state: 'MA'
+    }
+}
+*/
+/*
+//console.log(person) //will show us the values.
+//console.log(person.firstName) //will show us first name
+//you can log more than one thing.
+//console.log(person.firstName, person.lastName); //will print first and last name
+//console.log(person.hobbies[1])//if you want the second value in movies
+//if we wanted just the city
+//console.log(person.address.city)//will print Boston
+//const { firstName, lastName } = person
+//think of the above as not assigning but pulling from.
+//console.log(firstName)
+//if it's an imbeded object like address
+const { firstName, lastName, address: { city }} = person
+
+console.log(city)
+//destructuring is kind of advanced. 
+//you can also add to person
+person.email = 'john@gmail.com'
+console.log(person)//email now prints
+*/
+
+
+//arrays of objects
+const todos = [
+    {
+        id: 1,
+        text: 'Take out trash',
+        isCompleted: true
+    },
+    {
+        id: 2,
+        text: 'Meeting with boss',
+        isCompleted: true
+    },
+    {
+        id: 3,
+        text: 'Dentist appt',
+        isCompleted: false
+    },
+];
+/*
+console.log(todos)//prints out all of above
+console.log(todos[1])//prints out Meeting with boss
+//json format
+const todoJSON = JSON.stringify(todos);
+console.log(todoJSON);//prints in JSON format
+*/
+
+//for(let i = 0; i <= 10; i++) {
+//    console.log(i)
+//}
+//add a template string
+/*
+for(let i = 0; i <= 10; i++) {
+    console.log(`For Loop Number: ${i}`)
+}
+
+//while Loops
+let i = 0; //set the variable outside of the loop
+while(i < 10) {
+    console.log(`While Loop Number: ${i}`);
+    i++
+}
+*/
+/*
+//using the above array of the todos
+for(let i = 0; i <= todos.length; i++) {
+    console.log(todos[i]);
+    console.log(todos[i].text);
+}
+*/
+//above is not best practice for loops. Use for-of
+/*
+for(let todo of todos) {
+    //console.log(todo.)//prints complete array
+    console.log(todo.text)//prints just the text todos list
+    console.log(todo.id)// prints just the id's
+}
+*/
+//high order array methods
+//forEach, map, filter
+/*
+todos.forEach(function(todo) {//todo is variable i want to use
+    console.log(todo.text)//prints out text of todos can be .id, etc.
+});
+*/
+/*
+const todoText = todos.map(function(todo) {
+    return todo.text;
+    
+});
+console.log(todoText)//prints out todo list in array
+*/
+/*
+const todoCompleted = todos.filter(function(todo) {
+    return todo.isCompleted === true;
+
+});
+console.log(todoCompleted)
+*/
+/*
+const todoCompleted = todos.filter(function(todo) {
+    return todo.isCompleted === true;
+
+}).map(function(todo) {
+    return todo.text;
+})
+console.log(todoCompleted); //prints out todo completed text
+*/
+
+//conditionals
+//start with basic if statements
+
+const x = 10;
