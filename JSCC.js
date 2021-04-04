@@ -344,12 +344,14 @@ const color = x > 10 ? 'red' : 'blue'; // '?' is then ':' is else
 // basically checks to see if true or not true 
 console.log(color)
 */
+/*
+//switches... another way to evaluate a condition
 const x = 10;
 
 const color = x > 10 ? 'red' : 'blue';
 
 switch(color) {
-    case 'red':
+    case 'red'://set cases 
         console.log('color is red');
         break;
     case 'blue':
@@ -359,3 +361,28 @@ switch(color) {
         console.log("color is NOT red or blue");
     break;
 }
+*/
+//functions
+//function addNums(num1 = 1, num2 = 1) { //inside parentheses we put parameters
+//    console.log(num1 + num2)// at this point happens since we haven't called the function
+//}
+
+//addNums()//without assigning values we gat NaN (not a number)
+//addNums(5,4)//would console log 9
+//we can also assign default values to our function by num1 = 1, num2 = 1
+
+function addNums(num1 = 1, num2 = 1) { //inside parentheses we put parameters
+    console.log(num1 + num2)// at this point happens since we haven't called the function
+}
+
+//addNums()//this logs 2 as our default values
+//addNums(9,9)//this logs 18 as it takes in provided values
+
+//for the most part you are not going to console.log a function
+//you are going to return something from it.
+
+function addNums(num1 = 1, num2 = 1) { //
+    return num1 + num2;//this will not log anything unless we call it see below
+}
+
+console.log(addNums(5,5))
