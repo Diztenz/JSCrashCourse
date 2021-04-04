@@ -201,6 +201,7 @@ console.log(person)//email now prints
 
 
 //arrays of objects
+/*
 const todos = [
     {
         id: 1,
@@ -218,6 +219,7 @@ const todos = [
         isCompleted: false
     },
 ];
+*/
 /*
 console.log(todos)//prints out all of above
 console.log(todos[1])//prints out Meeting with boss
@@ -290,5 +292,70 @@ console.log(todoCompleted); //prints out todo completed text
 
 //conditionals
 //start with basic if statements
+/*
+const x = 15;//play with the number.  using a string prints out x is less than 10???
 
+if(x === 10) {//double == does not match data types if 10 was string '10' it would still be true
+    console.log('x is 10');
+}
+
+//if(x === 10) {//triple === has to match data type. this is false while above is true
+  //  console.log('x is 10');
+//} else {
+  //  console.log("x is NOT 10")
+//} 
+else if(x > 10) {
+    console.log("x is greater than 10")
+} else {
+    console.log("x is less than 10")
+}
+*/
+/*
+const x = 6;
+const y = 11;
+
+if(x > 5 || y > 10) {//double pipes means 'or'
+    console.log('x is more than 5 or y is more than 10')
+}
+*/
+/*
+const x = 6;
+const y = 7;
+
+//if(x > 5 && y > 10) {//double '&&' means 'and'
+    //console.log('x is more than 5 or y is more than 10')
+//} else {
+  //  console.log("nope")
+//}
+//the above can also be done with double if statement but not as clean
+if(x > 5) {
+    if(y > 10) {
+        console.log("Yes")
+    } else {
+    console.log("No")
+}
+}//not the preferred method
+*/
+/*
+//turnary operator
+const x = 5;
+
+const color = x > 10 ? 'red' : 'blue'; // '?' is then ':' is else
+// basically checks to see if true or not true 
+console.log(color)
+*/
 const x = 10;
+
+const color = x > 10 ? 'red' : 'blue';
+
+switch(color) {
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log('color is blue');
+        break;
+    default:
+        console.log("color is NOT red or blue");
+    break;
+}
